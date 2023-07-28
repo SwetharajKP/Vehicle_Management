@@ -1,0 +1,11 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'vehicles/styles.css' %}">
+
+<h1>{{vehicle}}</h1>
+<p>Make: {{vehicle.make}}</p>
+<p>Model: {{vehicle.model}}</p>
+<p>Year: {{vehicle.year}}</p>
+<p>Color: {{vehicle.color}}</p>
+<p>Mileage: {{vehicle.mileage}}</p>
+<a href="{% url 'vehicle_update' vehicle.id %}">Edit</a>
+<a href="{% url 'vehicle_delete' vehicle.id %}">Delete</a>

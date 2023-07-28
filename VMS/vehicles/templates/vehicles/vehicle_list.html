@@ -1,0 +1,12 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'vehicles/styles.css' %}">
+
+<h1>Vehicle List</h1>
+<ul>
+    {% for vehicle in vehicles %}
+    <li>
+        <a href="{% url 'vehicle_detail' vehicle.id %}">{{vehicle}}</a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'vehicle_create' %}">Create New Vehicle</a>
